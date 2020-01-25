@@ -1,10 +1,10 @@
 def solution(A):
     # write your code in Python 3.6
     A.sort()
-    for i in range(0, len(A), 2):
+    for i in range(0, len(A) - 1, 2):
         if A[i] != A[i+1]:
            return A[i]
-    return -1
+    return A[-1]
 
 print(1)
 print(7)
