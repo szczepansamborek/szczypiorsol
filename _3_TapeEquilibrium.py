@@ -3,7 +3,7 @@ def solution(A):
     s1 = A[0]
     s2 = sum(A) - A[0]
     sMin = abs(s1 - s2)
-    for i in range(1, len(A)):
+    for i in range(1, len(A) - 1):
         s1 += A[i]
         s2 -= A[i]
         sTemp = abs(s1 - s2)
