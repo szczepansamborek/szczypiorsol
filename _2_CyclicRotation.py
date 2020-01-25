@@ -1,9 +1,13 @@
 def solution(A, K):
     # write your code in Python 3.6
     N = len(A)
+    if N <= 0:
+        return A
     r = N - K
     while r < 0:
         r += N
+    if r % N == 0:
+        return A
     W = []
     for i in range(N):
         W.append(A[(r + i) % N])
@@ -30,3 +34,6 @@ print(solution([3, 8, 9, 7, 6], 6))
 print(7)
 print([8, 9, 7, 6, 3])
 print(solution([3, 8, 9, 7, 6], -6))
+print(8)
+print([])
+print(solution([], -6))
