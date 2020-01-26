@@ -3,9 +3,9 @@ def solution(A):
     for i in A:
         if i > 0 and i <= 100000:
             B.append(i)
-    if len(B) == 0:
-        return 1
     B.sort()
+    if len(B) == 0 or B[0] > 1:
+        return 1
     for i in range(len(B) - 1):
         if B[i] < B[i + 1] - 1:
             return B[i] + 1
