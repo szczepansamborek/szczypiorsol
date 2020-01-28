@@ -6,6 +6,8 @@ def solution(A):
             j += 1
         else:
             s += j
+        if s > 1000000000:
+            return -1
     return s
 
 print(solution([0, 1, 0, 1, 1]))
